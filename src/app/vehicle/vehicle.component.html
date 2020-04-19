@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col p-2" id="vehicles">
+      <label *ngFor="let vehicle of vehicles" class="d-block">
+        <input
+          type="radio"
+          name="Vehicle{{ Id }}"        
+          [(ngModel)]="selectedVehicle"
+          [value]="vehicle"
+          [disabled]="vehicle.total_no == 0 || selectedPlanet.distance > vehicle.max_distance"
+          (change)="onVehicleSelected()"
+        />
+        {{ vehicle.name }} ({{ vehicle.total_no }})
+      </label>
+    </div>
+  </div>
+  

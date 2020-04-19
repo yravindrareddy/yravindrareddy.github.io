@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-5" *ngIf="IsSuccess">
+    <div class="col text-center">
+      <b
+        >Success! Congratulations on Finding Falocne. King Shah is mighlty
+        pleased.</b
+      >
+      <br />
+      <br />
+      <b>Time Taken: {{ timeTaken }}</b>
+      <br />
+      <b>Planet Found: {{ findFaloneResult.planet_name }}</b>
+    </div>
+  </div>
+  <div class="row mt-5" *ngIf="!IsSuccess">
+    <div class="col text-center">
+      <b>{{ failureMessage }}</b>
+    </div>
+  </div>
+  <div class="row p-4">
+    <div class="col text-center">
+      <button class="btn btn-primary ml-1" (click)="redirect()" id="btnStart">
+        Start Again
+      </button>
+    </div>
+  </div>
+</div>

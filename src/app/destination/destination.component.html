@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col p-2">
+    <b>Destination {{ Id }}</b>
+  </div>
+</div>
+<app-planet #planet [planets]="planets" (planetSelected)="onPlanetSelected($event)"></app-planet>
+<app-vehicle #vehicle [vehicles]="vehicles" [Id]="Id" [selectedPlanet]="selectedPlanet" (vehicleSelected)="onVehicleSelected($event)"></app-vehicle>

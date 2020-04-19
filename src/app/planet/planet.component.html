@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col p-2 dropdownCtrl">
+      <select
+        class="form-control form-control-sm"
+        (change)="onPlanetSelected()"
+        [(ngModel)]="selectedPlanet"      
+      >
+        <option value="undefined" disabled>Select</option>
+        <option *ngFor="let planet of planets" [ngValue]="planet">
+          {{ planet.name }}
+        </option>
+      </select>
+    </div>
+  </div>

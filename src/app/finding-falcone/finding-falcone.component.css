@@ -1,0 +1,18 @@
+.centeralign{
+    margin: auto;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    vertical-align: middle;
+}
+
+.container {
+    padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    #destinations.row {
+        flex-direction: column;
+    }   
+}
